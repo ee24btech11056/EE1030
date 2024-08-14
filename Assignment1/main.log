@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Debian) (preloaded format=pdflatex 2024.8.2)  14 AUG 2024 03:52
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Debian) (preloaded format=pdflatex 2024.8.2)  14 AUG 2024 08:54
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1339,112 +1339,83 @@ Package hyperref Info: Link coloring OFF on input line 52.
 \@outlinefile=\write5
 \openout5 = `main.out'.
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 59--61
-
- []
-
 LaTeX Font Info:    Trying to load font information for U+txsya on input line 6
-1.
+2.
+
 (/usr/share/texlive/texmf-dist/tex/latex/txfonts/utxsya.fd
 File: utxsya.fd 2000/12/15 v3.1
 )
 LaTeX Font Info:    Trying to load font information for U+txsyb on input line 6
-1.
+2.
 
 (/usr/share/texlive/texmf-dist/tex/latex/txfonts/utxsyb.fd
 File: utxsyb.fd 2000/12/15 v3.1
 )
 LaTeX Font Info:    Trying to load font information for U+txmia on input line 6
-1.
+2.
 
 (/usr/share/texlive/texmf-dist/tex/latex/txfonts/utxmia.fd
 File: utxmia.fd 2000/12/15 v3.1
 )
 LaTeX Font Info:    Trying to load font information for U+txsyc on input line 6
-1.
+2.
 
 (/usr/share/texlive/texmf-dist/tex/latex/txfonts/utxsyc.fd
 File: utxsyc.fd 2000/12/15 v3.1
 )
 LaTeX Font Info:    Trying to load font information for TS1+txr on input line 6
-1.
+2.
 
 (/usr/share/texlive/texmf-dist/tex/latex/txfonts/ts1txr.fd
 File: ts1txr.fd 2000/12/15 v3.1
 )
-Underfull \hbox (badness 3758) in paragraph at lines 61--66
-[]\OT1/txr/m/n/12 The larger of $[] []$ and $[] []$ if
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 61--66
+Underfull \hbox (badness 10000) in paragraph at lines 67--68
 
  []
 
 
-Underfull \hbox (badness 2401) in paragraph at lines 67--71
-\OT1/txr/m/n/12 is mono-ton-i-cally in-creas-ing for val-ues of
+Underfull \hbox (badness 10000) in paragraph at lines 70--75
+\OT1/txr/m/n/12 is mono-ton-i-cally in-creas-ing for val-ues
  []
 
 
-Underfull \hbox (badness 1472) in paragraph at lines 67--71
-\OML/txmi/m/it/12 x []$ \OT1/txr/m/n/12 sat-is-fy-ing the in-equal-i-ties .....
-. and
+Underfull \hbox (badness 10000) in paragraph at lines 70--75
+\OT1/txr/m/n/12 of $\OML/txmi/m/it/12 x []$ \OT1/txr/m/n/12 sat-is-fy-ing the i
+n-equal-i-ties
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 72--73
-
+Underfull \hbox (badness 10000) in paragraph at lines 70--75
+\OT1/txr/m/n/12 ...... and mono-ton-i-cally de-creas-ing for
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 74--76
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 82--83
+Underfull \hbox (badness 10000) in paragraph at lines 70--75
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 89--90
+Underfull \hbox (badness 10000) in paragraph at lines 79--82
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 92--93
+Underfull \hbox (badness 10000) in paragraph at lines 86--90
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 101--102
+Underfull \hbox (badness 10000) in paragraph at lines 94--99
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 103--105
+Underfull \hbox (badness 10000) in paragraph at lines 114--117
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 108--109
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 119--120
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 131--132
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 143--144
+Underfull \hbox (badness 10000) in paragraph at lines 156--157
 
  []
 
@@ -1452,52 +1423,36 @@ Underfull \hbox (badness 10000) in paragraph at lines 143--144
 
 
 ]
-Underfull \hbox (badness 1360) in paragraph at lines 180--182
+Underfull \hbox (badness 1360) in paragraph at lines 195--197
 []\OT1/txr/m/n/12 decreasing in $[]$ and in-creas-ing in
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 180--182
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 187--188
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 194--196
-
  []
 
 [2
 
 ] (./main.aux)
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
+(rerunfilecheck)             Checksum: E6176A9B7773AD02B1ED716C69FC28C2;485.
  ) 
 Here is how much of TeX's memory you used:
- 30640 strings out of 476091
- 602171 string characters out of 5794082
- 1880330 words of memory out of 5000000
- 50310 multiletter control sequences out of 15000+600000
- 572228 words of font info for 149 fonts, out of 8000000 for 9000
+ 30651 strings out of 476091
+ 602268 string characters out of 5794082
+ 1882330 words of memory out of 5000000
+ 50318 multiletter control sequences out of 15000+600000
+ 571932 words of font info for 149 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
- 101i,9n,96p,1172b,584s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 101i,9n,96p,1172b,686s stack positions out of 10000i,1000n,20000p,200000b,200000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texliv
-e/texmf-dist/fonts/type1/public/txfonts/rtxb.pfb></usr/share/texlive/texmf-dist
-/fonts/type1/public/txfonts/rtxmi.pfb></usr/share/texlive/texmf-dist/fonts/type
-1/public/txfonts/rtxr.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/txf
-onts/txex.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/txfonts/txsy.pf
-b></usr/share/texlive/texmf-dist/fonts/type1/public/txfonts/txsyc.pfb></usr/sha
-re/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texm
-f-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/ty
-pe1/urw/times/utmri8a.pfb>
-Output written on main.pdf (2 pages, 59041 bytes).
+e/texmf-dist/fonts/type1/public/txfonts/rtxmi.pfb></usr/share/texlive/texmf-dis
+t/fonts/type1/public/txfonts/rtxr.pfb></usr/share/texlive/texmf-dist/fonts/type
+1/public/txfonts/rtxsc.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/tx
+fonts/txex.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/txfonts/txsy.p
+fb></usr/share/texlive/texmf-dist/fonts/type1/public/txfonts/txsyc.pfb></usr/sh
+are/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/tex
+mf-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on main.pdf (2 pages, 51819 bytes).
 PDF statistics:
- 125 PDF objects out of 1000 (max. 8388607)
- 101 compressed objects within 2 object streams
- 50 named destinations out of 1000 (max. 500000)
- 13 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 133 PDF objects out of 1000 (max. 8388607)
+ 111 compressed objects within 2 object streams
+ 53 named destinations out of 1000 (max. 500000)
+ 37 words of extra memory for PDF output out of 10000 (max. 10000000)
 
