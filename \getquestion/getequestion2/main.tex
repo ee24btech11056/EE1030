@@ -27,7 +27,9 @@
 \usepackage{pgfplots}
 \pgfplotsset{compat=1.18}
 \usepackage{listings}
-% \usepackage{gvv}                                        
+% \usepackage{gvv}  
+\newcommand{\questionref}[1]{{ #1}}
+\usepackage{xparse}                                      
 \def\inputGnumericTable{}                                 
 \usepackage[latin1]{inputenc}                                
 \usepackage{color}                                            
@@ -62,7 +64,7 @@
     \item $\frac{2}{3} \pi c U \alpha, \; \frac{1}{3} \pi c U \alpha$
     \item $\frac{4}{3} \pi c U \alpha, \; \frac{4}{3} \pi c U \alpha$\\
 \end{enumerate}
-\section{Statement for Linked Answer Questions 54 and 55:} A wing-body alone configuration airplane with a wing loading of $\frac{W}{S} = 1000N/m^2$ is flying in cruise condition at a speed $V = 90m/s$ at sea-level (air density at sea-level $\rho_e = 1.122kg/m^3$). The zero lift pitching moment coefficient of the airplane is $C_{\text{m0}} = C_{m_{\text{ac}}} = -0.06$ and the location of airplane aerodynamic center from the wing leading edge is $X_{\text{ac}} = 0.25c$. Here $c$ is the chord length.
+\section{Statement for Linked Answer Questions \questionref{54} and \questionref{55}:} A wing-body alone configuration airplane with a wing loading of $\frac{W}{S} = 1000N/m^2$ is flying in cruise condition at a speed $V = 90m/s$ at sea-level (air density at sea-level $\rho_e = 1.122kg/m^3$). The zero lift pitching moment coefficient of the airplane is $C_{\text{m0}} = C_{m_{\text{ac}}} = -0.06$ and the location of airplane aerodynamic center from the wing leading edge is $X_{\text{ac}} = 0.25c$. Here $c$ is the chord length.
 \item The airplane trim lift coefficient $C_{L_{\text{trim}}}$ is
 
 \begin{enumerate}
@@ -84,7 +86,7 @@
 
 Q.56 -- Q.60 carry one mark each.\\
 
-\item If $3 \leq X \leq 5 and 8 \leq Y \leq 11$ then which of the following options is TRUE?
+\item If $3 \leq X \leq 5$ and $8 \leq Y \leq 11$ then which of the following options is TRUE?
 
 \begin{enumerate}
     \item $\frac{3}{5} \leq \frac{X}{Y} \leq \frac{8}{5}$
