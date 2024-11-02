@@ -1,0 +1,237 @@
+\let\negmedspace\undefined
+\let\negthickspace\undefined
+\documentclass[journal]{IEEEtran}
+\usepackage[a5paper, margin=10mm, onecolumn]{geometry}
+%\usepackage{lmodern} % Ensure lmodern is loaded for pdflatex
+\usepackage{tfrupee} % Include tfrupee package
+
+\setlength{\headheight}{1cm} % Set the height of the header box
+\setlength{\headsep}{0mm}     % Set the distance between the header box and the top of the text
+\usepackage{multicol}
+\usepackage{gvv-book}
+\usepackage{gvv}
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage{txfonts}
+\usepackage{listings}
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage{gensymb}
+\usepackage{comment}
+\usepackage[breaklinks=true]{hyperref}
+\usepackage{tkz-euclide} 
+\usepackage{listings}
+% \usepackage{gvv}                                        
+\def\inputGnumericTable{}                                 
+\usepackage[latin1]{inputenc}                                
+\usepackage{color}                                            
+\usepackage{array}                                            
+\usepackage{longtable}                                       
+\usepackage{calc}                                             
+\usepackage{multirow}                                         
+\usepackage{hhline}                                           
+\usepackage{ifthen}                                           
+\usepackage{lscape}
+\usepackage{tikz}
+\begin{document}
+
+\bibliographystyle{IEEEtran}
+\vspace{3cm}
+
+\title{2020-ST}
+\author{EE24BTECH11056 - S.Kavya Anvitha}
+% \maketitle
+% \newpage
+% \bigskip
+{\let\newpage\relax\maketitle}
+
+\renewcommand{\thefigure}{\theenumi}
+\renewcommand{\thetable}{\theenumi}
+\setlength{\intextsep}{10pt} % Space between text and floats
+
+
+\numberwithin{equation}{enumi}
+\numberwithin{figure}{enumi}
+\renewcommand{\thetable}{\theenumi}
+
+\begin{enumerate}
+
+\item Consider the linear transformation  $T : \mathbb{C}^3 \text{to}\mathbb{C}^3$  defined by
+
+\begin{align*}
+T\brak{\brak{x, y, z}} = \brak{ x, \frac{\sqrt{3}}{2} y - \frac{1}{2} z, \frac{1}{2} y + \frac{\sqrt{3}}{2} z },
+\end{align*}
+
+where  $\mathbb{C}$ is the set of all complex numbers and  $\mathbb{C}^3 = \mathbb{C} \times \mathbb{C} \times \mathbb{C} $. Which of the following statements is TRUE?
+
+\hfill{2020-ST}
+
+\begin{enumerate}
+    \item There exists a non-zero vector  $X$ such that  $T(X) = -X$
+    \item There exist a non-zero vector $Y $ and a real number  $\lambda \neq 1$ such that  $T(Y) = \lambda Y$
+    \item  $T$ is diagonalizable
+    \item  $T^2 = I_3$, where $I_3$ is the  $3 \times 3$ identity matrix
+\end{enumerate}
+
+\item For real numbers  $a, b$ and  $c$, let
+\begin{align*}
+M = \begin{bmatrix} a & ac & 0 \\ b & bc & 1 \\ 1 & c & 0 \end{bmatrix}.
+\end{align*}
+Then, which of the following statements is TRUE?
+\hfill{2020-ST}
+\begin{enumerate}
+    \item  $\text{Rank}(M) = 3 $ for every  $a, b, c \in \mathbb{R}$
+    \item If  $a + c = 0$ then  $M$ is diagonalizable for every  $b \in \mathbb{R}$
+    \item  $M$ has a pair of orthogonal eigenvectors for every  $a, b, c \in \mathbb{R}$
+    \item If  $b = 0$ and  $a + c = 1$ then  $M$ is NOT idempotent
+\end{enumerate}
+
+\item Let  $M$ be a  $4 \times 4$ matrix with  $(x - 1)^2(x - 3)^2$ as its minimal polynomial. Then, which of the following statements is FALSE?
+\hfill{2020-ST}
+\begin{enumerate}
+    \item The eigenvalues of  $M$ are $1$ and $3$
+    \item The algebraic multiplicity of the eigenvalue $1$ is $3$
+    \item $M$ is NOT diagonalizable
+    \item $\text{Trace}(M) = 8$
+\end{enumerate}
+
+\item Let $f : \mathbb{R} \times \mathbb{R} \to \mathbb{R}$ be defined by
+\begin{align*}
+ f(x, y) = \abs{y - 2} \sqrt{\abs{x - 1}}, \myvec{x, y} \in \mathbb{R} \times \mathbb{R},   
+\end{align*}
+where  $\mathbb{R}$ denotes the set of all real numbers. Then which of the following statements is TRUE?
+\hfill{2020-ST}
+\begin{enumerate}
+    \item $f$ is differentiable at \myvec{1,2}
+    \item $f$ is continuous at \myvec{1,2} but NOT differentiable at \myvec{1,2}
+    \item The partial derivative of  $f$, with respect to  $x$, at $\myvec{1,2}$ does NOT exist
+    \item The directional derivative of  $f$ at \myvec{1,2} along  $\vec{u} = \myvec{\frac{1}{\sqrt{2}}, \frac{1}{\sqrt{2}}}$ equals $1$
+\end{enumerate}
+
+\item Which of the following functions is uniformly continuous on the 
+specified domain? 
+
+\hfill{2020-ST}
+
+\begin{enumerate}
+    \item $f_1\brak{x} = e^{x^2}, -\infty < x < \infty$
+    \item $f_2\brak{x} = \begin{cases} \frac{1}{x}, & 0 < x \leq 1 \\ 0, & x = 0 \end{cases}$
+    \item $f_3\brak{x} = \frac{x^2}{1 + x^2}, \abs{x} \leq 1$
+    \item $f_4\brak{x} = \begin{cases} x, & \abs{x} \leq 1 \\ \frac{x}{2}, & \abs{x} > 1 \end{cases}$
+\end{enumerate}
+\item Let the random vector $X = (X_1, X_2, X_3)$ have the joint probability density function
+\begin{align*}
+f_X\brak{x_1, x_2, x_3} = \begin{cases}
+\frac{1 - \sin x_1 \sin x_2 \sin x_3}{8 \pi^3}, & 0 \leq x_1, x_2, x_3 \leq 2 \pi, \\
+0, & \text{otherwise}.
+\end{cases}
+\end{align*}
+Which of the following statements is TRUE?
+\hfill{2020-ST}
+\begin{enumerate}
+    \item $X_1, X_2$ and $X_3$ are mutually independent
+    \item $X_1, X_2$ and $X_3$ are pairwise independent
+    \item $(X_1, X_2)$ and $X_3$ are independently distributed
+    \item Variance of $X_1 + X_2$ is $\pi^2$
+\end{enumerate}
+
+\item Suppose that $P_1$ and $P_2$ are two populations having bivariate normal distributions with mean vectors $\begin{pmatrix} 0 \\ 0 \end{pmatrix}$ and $\begin{pmatrix} 1 \\ 1 \end{pmatrix}$, respectively, and the same variance-covariance matrix $\begin{pmatrix} 1 & 0.5 \\ 0.5 & 1 \end{pmatrix}$. Let $Z_1 = (0.75, 0.75)$ and $Z_2 = (0.25, 0.25)$ be two new observations. If the prior probabilities for $P_1$ and $P_2$ are assumed to be equal and the misclassification costs are also assumed to be equal then, according to the linear discriminant rule,
+
+\hfill{2020-ST}
+\begin{enumerate}
+    \item $Z_1$ is assigned to $P_1$ and $Z_2$ is assigned to $P_2$
+    \item $Z_1$ is assigned to $P_2$ and $Z_2$ is assigned to $P_1$
+    \item Both $Z_1$ and $Z_2$ are assigned to $P_1$
+    \item Both $Z_1$ and $Z_2$ are assigned to $P_2$
+\end{enumerate}
+
+\item Let $X_1, \dots, X_n$ be a random sample of size $n (\geq 2)$ from an exponential distribution with the probability density function
+\begin{align*}
+f(x; \theta) = \begin{cases} 
+\frac{1}{\theta} e^{-(x - \theta)/\theta}, & x > \theta, \\
+0, & \text{otherwise},
+\end{cases}
+\end{align*}
+where $\theta \in (0, \infty)$. Which of the following statements is TRUE?
+\hfill{2020-ST}
+\begin{enumerate}
+    \item $\min_{1 \leq i \leq n} X_i$ is a minimal sufficient statistic
+    \item $\sum_{i=1}^n X_i$ is a minimal sufficient statistic
+    \item Any minimal sufficient statistic is complete
+    \item $\brak{ \min_{1 \leq i \leq n} X_i, \sum_{i=1}^n X_i}$ is minimal sufficient statistic
+\end{enumerate}
+
+\item Let the joint distribution of $(X, Y)$ be bivariate normal with mean vector $\begin{pmatrix} 0 \\ 0 \end{pmatrix}$ and variance-covariance matrix $\begin{pmatrix} 1 & \rho \\ \rho & 1 \end{pmatrix}$, where $-1 < \rho < 1$. Then $E \left[ \max(X, Y) \right]$ equals
+
+\hfill{2020-ST}
+\begin{enumerate}
+    \item $\frac{\sqrt{1 - \rho}}{\pi}$
+    \item $\sqrt{\frac{1 - \rho}{\pi}}$
+    \item $0$
+    \item $\frac{1}{2}$
+\end{enumerate}
+
+\item Let $X_1, X_2, \dots, X_{10}$ be independent and identically distributed $N_3(0, I_3)$ random vectors, where $I_3$ is the $3 \times 3$ identity matrix. Let
+\begin{align*}
+T = \sum_{i=1}^{10} \brak{ X_i^t \left( I_3 - \frac{1}{3} J_3 \right) X_i},
+\end{align*}
+where $J_3$ is the $3 \times 3$ matrix with each entry 1 and for any column vector $U$, $U^t$ denotes its transpose. Then the distribution of $T$ is
+\hfill{2020-ST}
+\begin{enumerate}
+    \item central chi-square with $5$ degrees of freedom
+    \item central chi-square with $10$ degrees of freedom
+    \item central chi-square with $20$ degrees of freedom
+    \item central chi-square with $30$ degrees of freedom
+\end{enumerate}
+
+\item Let $X_1, X_2$ and $X_3$ be independent and identically distributed $N_4(0, \Sigma)$ random vectors, where $\Sigma$ is a positive definite matrix. Further, let 
+\begin{align*}
+X = \begin{pmatrix} X_1^t \\ X_2^t \\ X_3^t \end{pmatrix}
+\end{align*}
+be a $3 \times 4$ matrix, where for any matrix $M$, $M^t$ denotes its transpose. If $W_m(n, \Sigma)$ denotes a Wishart distribution of order $m$ with $n$ degrees of freedom and variance-covariance matrix $\Sigma$, then which of the following statements is TRUE?
+\hfill{2020-ST}
+\begin{enumerate}
+    \item $\Sigma^{-1/2} X^t X \Sigma^{-1/2}$ follows $W_4(3, I_4)$ distribution
+    \item $\Sigma^{-1/2} X^t X \Sigma^{-1/2}$ follows $W_3(4, I_3)$ distribution
+    \item $\text{Trace} (X \Sigma^{-1} X^t)$ follows $\chi^2_3$ distribution
+    \item $X^t X$ follows $W_3(4, \Sigma)$ distribution
+\end{enumerate}
+
+\item Let the joint distribution of the random variables $X_1, X_2$ and $X_3$ be $N_3(\mu, \Sigma)$, where 
+\begin{align*}
+\mu = \begin{pmatrix} 1 \\ 2 \\ 3 \end{pmatrix} \quad \text{and} \quad \Sigma = \begin{pmatrix} 1 & 0.5 & 0 \\ 0.5 & 1 & 0 \\ 0 & 0 & 5 \end{pmatrix}.
+\end{align*}
+Then which of the following statements is TRUE?
+\hfill{2020-ST}
+\begin{enumerate}
+    \item $X_1 - X_2 + X_3$ and $X_1$ are independent
+    \item $X_1 + X_2$ and $X_3 - X_1$ are independent
+    \item $X_1 + X_2 + X_3$ and $X_1 + X_2$ are independent
+    \item $X_1 - 2X_2$ and $2X_1 + X_2$ are independent
+\end{enumerate}
+
+\item Consider the following one-way fixed effects analysis of variance model
+\begin{align*}
+Y_{ij} = \mu + \tau_i + \epsilon_{ij}, \quad i = 1, 2, 3; \, j = 1, 2, 3, 4;
+\end{align*}
+where $\epsilon_{ij}$ are independent and identically distributed $N(0, \sigma^2)$ random variables, $\sigma \in (0, \infty)$ and $\tau_1 + \tau_2 + \tau_3 = 0$. Let $MST$ and $MSE$ denote the mean sum of squares due to treatment and the mean sum of squares due to error, respectively. For testing $H_0: \tau_1 = \tau_2 = \tau_3 = 0$ against $H_1: \tau_i \neq 0$, for some $i = 1, 2, 3$, consider the test based on the statistic $\frac{MST}{MSE}$. For positive integers $v_1$ and $v_2$, let $F_{v_1, v_2}$ be a random variable having the central $F$-distribution with $v_1$ and $v_2$ degrees of freedom. If the observed value of $\frac{MST}{MSE}$ is given to be 104.45, then the p-value of this test equals
+\hfill{2020-ST}
+\begin{enumerate}
+    \item $P(F_{2,9} > 104.45)$
+    \item $P(F_{9,2} < 104.45)$
+    \item $P(F_{3,11} < 104.45)$
+    \item $P(F_{2,6} > 104.45)$
+\end{enumerate}
+
+
+
+
+
+
+
+\end{enumerate}
+\end{document}i
