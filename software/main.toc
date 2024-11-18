@@ -1,0 +1,5 @@
+\beamer@sectionintoc {2}{Algorithm}{3}{0}{1}
+\beamer@sectionintoc {3}{Time Complexity}{4}{0}{2}
+\beamer@sectionintoc {4}{other insights}{5}{0}{3}
+\beamer@sectionintoc {5}{comparison}{6}{0}{4}
+\beamer@sectionintoc {6}{working on Algorithm}{7}{0}{5}

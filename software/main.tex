@@ -1,0 +1,209 @@
+\let\negmedspace\undefined
+\let\negthickspace\undefined
+\documentclass[journal]{IEEEtran}
+\usepackage[a5paper, margin=10mm, onecolumn]{geometry}
+%\usepackage{lmodern} % Ensure lmodern is loaded for pdflatex
+\usepackage{tfrupee} % Include tfrupee package
+
+\setlength{\headheight}{1cm} % Set the height of the header box
+\setlength{\headsep}{0mm}     % Set the distance between the header box and the top of the text
+\usepackage{multicol}
+\usepackage{gvv}
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage{txfonts}
+\usepackage{listings}
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage{gensymb}
+\usepackage{comment}
+\usepackage[breaklinks=true]{hyperref}
+\usepackage{tkz-euclide} 
+\usepackage{listings}
+% \usepackage{gvv}                                        
+\def\inputGnumericTable{}                                 
+\usepackage[latin1]{inputenc}                                
+\usepackage{color}                                            
+\usepackage{array}                                            
+\usepackage{longtable}                                       
+\usepackage{calc}                                             
+\usepackage{multirow}                                         
+\usepackage{hhline}                                           
+\usepackage{ifthen}                                           
+\usepackage{lscape}
+\usepackage{tikz}
+\begin{document}
+
+\bibliographystyle{IEEEtran}
+\vspace{3cm}
+
+\title{Computation of eigen values}
+\author{EE24BTECH11056 - S.Kavya Anvitha}
+% \maketitle
+% \newpage
+% \bigskip
+{\let\newpage\relax\maketitle}
+
+\renewcommand{\thefigure}{\theenumi}
+\renewcommand{\thetable}{\theenumi}
+\setlength{\intextsep}{10pt} % Space between text and floats
+
+
+\numberwithin{equation}{enumi}
+\numberwithin{figure}{enumi}
+\renewcommand{\thetable}{\theenumi}
+\section{\textbf{What are eigen values?}}
+\begin{enumerate}
+\item If there is a matrix \myvec{a & b \\ c & d}. this matrix is transforming $\hat{i}$ and $\hat{j}$ with $\hat{i}$ to (a,c) and $\hat{j}$ to (b,d)
+\item most vectors will be knocked out of their span during transformation.but some special vectors do remain on their own span meaning the effect that the matrix has on such a vector is just to stretch it.
+\item these vectors are called eigen vectors
+\item The factor by which the eigen vector is stretched during the transformation is called eigen value.  
+\end{enumerate}
+\section{\textbf{Algorithm}}
+    \textbf{QR Algorithm with Hessenberg Reduction:} 
+    This method is used to find eigen values of a matrix 
+    \begin{enumerate}
+        \item Reduce the Matrix to Hessenberg Form
+        \begin{itemize}
+            \item reduce the matrix to upper Hessenberg form.
+            \item this step simplifies the matrix structure while retaining its eigenvalues,making the QR steps more efficient.
+        \end{itemize}
+        \item Iterate with QR steps 
+        \begin{itemize}
+            \item Apply the QR algorithm.
+            \item Continue iterating until the off-diagonal elements are close to zero,indicating convergence. 
+        \end{itemize}
+        \item Extract EigenValues
+        \begin{itemize}
+            \item Once the matrix is nearly diagonal, the eigenvalues are approximated by the diagonal elements.
+        \end{itemize}
+    \end{enumerate}
+
+
+\section{\textbf{Time Complexity}}
+    \begin{enumerate}
+        \item for constructing householder vector v:$O(n-k)$\\
+        for applying transformation to update rows and columns of A:$O((n-k)^2)$\\
+        Summing over all columns:$\Sigma(n-k)^2$ approx $\frac{n^3}{3}$
+        \item QR decomposition for a Hessenberg matrix takes $O(n^2)$
+        so per iteration $O(n^2)$.since there are n iterations total cost is $O(n^2)\times O(n) = O(n^3)$
+        \item the overall time complexity is: 
+        \begin{align*}
+        T_\text{Total} = T_\text{Hessenberg} + T_{QR} = O(n^3) + O(n^3) = O(n^3)
+         \end{align*}
+    \end{enumerate}
+
+\section{\textbf{other insights}}
+    \begin{enumerate}
+        
+        \item This method is suitable for symmetric, non-symmetric and large matrices also.
+        \begin{itemize}
+            \item Handles large and small matrices by reducing computation through matrix reduction.
+        \end{itemize}
+        \item By reducing the matrix to Hessenberg form, fewer elements need to be considered for each QR iteration, leading to faster convergence.
+        \begin{itemize}
+            \item The number of operations required for QR decomposition and subsequent iterations is smaller compared to directly applying the QR algorithm to a general matrix.
+        \end{itemize}
+        \item The Hessenberg reduction reduces the number of elements in the matrix, which helps in reducing memory requirements compared to methods that do not utilize Hessenberg form, making it more memory-efficient for large matrices.
+    \end{enumerate}
+    
+\section{\textbf{Comparison with other algorithms}}
+        \begin{enumerate}
+            \item This method have fast convergence rate while compared to other methods like LU Decomposition Power Iteration(for eigen values with close magnitude),Jacobi method... etc.
+            \item Efficient for finding all eigenvalues of dense matrices.Where as power iteration is not suitable for finding all eigenvalues.
+            \item This method works for both symmetric and non-symmetric matrices.While Jacobi method is Limited to symmetric matrices.
+            \item Unlike other methods like power iteration, the QR algorithm can handle matrices that may be defective (not diagonalizable). 
+            \item Time complexity of this method is $O(n^3)$,Where as Time complexity of Jacobi method is $O(n^4)$
+        \end{enumerate}
+   
+    
+\section{\textbf{working with Algorithm}}
+
+      \textbf{Hessenberg reduction:}\\
+      \begin{enumerate}
+      \item We need to reduce the matrix to Hessenberg form which helps QR algorithm to perform easily
+      \item To do this we need to use householder reflections.
+      \begin{itemize}
+      \item Using householder reflections we need to zero out elements below the subdiagonal of the matrix.
+      \item To do this we construct a vector v and a reflection matrix p.\\
+      consider a matrix A,
+      \begin{align*}
+      P = I - \frac{2vv^T}{v^Tv}
+      \end{align*}
+      \begin{align*}
+      v = x + sign(x)\norm{x}e_1
+      \end{align*} 
+      where x is the 1st column below A[1,1].and $a_2,a_3,a_4,a_5$ are elements of first column below A[1,1]
+      
+      \end{itemize}
+      \item after finding v we need to normalise it 
+      \item now, $PA = A - 2v(v^TA)$\\
+      $A_{new} = A - 2v(v^TA)$.
+      \item similarly we need to apply this for all rows and columns.
+      \item these together implies $A = PAP_T$ without explicitly forming $P_T$.Finally the transformation to Hessenberg form preserves 
+      eigenvalues because the Householder reflections are orthogonal transformations.
+      \end{enumerate}  
+      \textbf{QR Algorithm:}\\
+      \begin{enumerate}
+     \item  Start with a square matrix $A \in \mathbb{R}^{n\times n}$
+      \item Set $A_0 = A$
+      \item For each iteration k, compute the QR decomposition of the matrix $A_{k}$:
+      \begin{align*}
+          A_k = Q_kR_k
+      \end{align*}
+      where: \begin{itemize}
+          \item $Q_k$ is Orthogonal meaning $Q_k^T$$Q_k$ = $I$
+          \item $R_k$ is an upper triangular matrix
+      \end{itemize}
+      QR decomposition can be done using methods like Gram-Schmidt
+      
+      \item After performing the QR decomposition, update the matrix as:
+      \begin{align*}
+          A_{k+1} = R_kQ_k
+      \end{align*}
+      This step essentially reorders the matrix, and the process is repeated for subsequent iterations.
+    \end{enumerate}
+    \begin{itemize}
+        \item Repeat the QR decomposition and matrix update steps iteratively until the matrix $A_k$ converges to a diagonal matrix, i.e., the off-diagonal elements become very small (close to machine precision).        
+        \item The diagonal elements of the resulting matrix $A_k$
+  after sufficient iterations are the eigenvalues of the original matrix A.
+
+      \end{itemize}
+   
+  % Define colors for syntax highlighting
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+
+% Settings for the C code
+\lstset{
+    language=C,
+    basicstyle=\footnotesize\ttfamily,
+    backgroundcolor=\color{backcolour},
+    commentstyle=\color{codegreen},
+    keywordstyle=\color{blue},
+    numberstyle=\tiny\color{codegray},
+    stringstyle=\color{codepurple},
+    breakatwhitespace=false,
+    breaklines=true,
+    captionpos=b,
+    keepspaces=true,
+    numbers=left,
+    numbersep=5pt,
+    showspaces=false,
+    showstringspaces=false,
+    showtabs=false,
+    tabsize=2
+}
+
+\section{\textbf{C code}}
+\lstinputlisting[label=mycode1]{eigenvalues.c}
+
+  
+
+\end{document}
