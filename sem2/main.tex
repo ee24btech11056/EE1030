@@ -136,23 +136,29 @@ Integrate both sides:
 y \cdot \abs{\sec(x) + \tan(x)} &= \int \tan(x) \abs{\sec(x) + \tan(x)} \, dx.
 \end{align}
 
-Observe that the derivative of $\sec(x) + \tan(x)$ is $\sec(x)\tan(x) + \sec^2(x)$, so the integral simplifies to:
-
 \begin{align}
-y \cdot \abs{\sec(x) + \tan(x)} &= \abs{\sec(x) + \tan(x)} + C.
+y \cdot \abs{\sec(x) + \tan(x)} &= \int \tan(x) \cdot {\sec(x)} + \tan^{2}(x)
+\end{align}
+\begin{align}
+y \cdot \abs{\sec(x) + \tan(x)} &=  \sec(x) +\tan(x) - x + C.
 \end{align}
 
 Therefore, the general solution is:
 
 \begin{align}
-y = 1 + \frac{C}{\abs{\sec(x) + \tan(x)}}
+y = 1 - \frac{C \cdot x}{\sec(x) + \tan(x)}
 \end{align}
 
 where $C$ is the constant of integration.
 
+by assuming $C$ as $1$ we get a solution for this differential equation as 
+\begin{align}
+y = 1 - \frac{x}{\sec(x)+\tan(x)}
+\end{align}
+
 \begin{figure}[h!]
    \centering
-   \includegraphics[width=0.7\columnwidth]{figs/combined_plot.pdf}
+   \includegraphics[width=\columnwidth]{figs/combined_plot.pdf}
 \end{figure}
 
 
