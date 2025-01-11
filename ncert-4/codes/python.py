@@ -12,9 +12,8 @@ x0 = 1.0
 y0 = 1.0
 h = 0.001
 
-# Limit the range up to x = 2
-x_max = 2.0
-steps = int((x_max - x0) / h)
+# Set the number of steps directly instead of limiting by x_max
+steps = 5000  # Adjust the number of steps as needed for desired range
 
 # Prepare array for results
 results = (ctypes.c_double * steps)()
@@ -27,15 +26,14 @@ x_values = np.linspace(x0, x0 + h * (steps - 1), steps)
 # Analytical solution: y = x^2 + log|x|
 y_analytical = x_values**2 + np.log(np.abs(x_values))
 
-# Plot both graphs only up to x < 2
+# Plot both graphs for the extended range
 plt.figure(figsize=(10, 6))
 plt.plot(x_values, y_trapezoidal, marker='o', label="Trapezoidal Approximation", linestyle='--')
 plt.plot(x_values, y_analytical, label=r"$y = x^2 + \log|x|$", color='red')
 plt.xlabel('x')
 plt.ylabel('y')
-plt.title('Trapezoidal Rule vs Analytical Solution (Up to $x < 2$)')
 plt.legend()
 plt.grid(True)
-plt.savefig('fig_limited.pdf')
+plt.savefig('fig.pdf')
 plt.show()
 
