@@ -2,7 +2,7 @@
 #include <math.h>
 
 double f(double x) {
-    return (2 * x + 1) / x;
+    return (2 * x )+ 1 / x;
 }
 
 void solve_trapezoidal(double x0, double y0, double h, int steps, double *results) {

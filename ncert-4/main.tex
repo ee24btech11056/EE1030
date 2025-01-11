@@ -97,11 +97,11 @@ y_{n+1} = y_n + \frac{h}{2} \left[ f(x_n, y_n) + f(x_{n+1}, y_{n+1}) \right].
 \end{align}
 The function  is:
 \begin{align}
-f(x, y) = \frac{2x + 1}{x}.
+f(x, y) =  2x + \frac{1}{x}.
 \end{align}
 Substitute  and  into the general trapezoidal formula:
 \begin{align}
-y_{n+1} = y_n + \frac{h}{2} \left[ \frac{2x_n + 1}{x_n} + \frac{2x_{n+1} + 1}{x_{n+1}} \right].
+y_{n+1} = y_n + \frac{h}{2} \left[2x_n + \frac{1}{x_n} + 2x_{n+1} +\frac{1}{x_{n+1}} \right].
 \end{align}
  Express $x_{n+1}$ Explicitly \\
  since 
@@ -110,10 +110,27 @@ y_{n+1} = y_n + \frac{h}{2} \left[ \frac{2x_n + 1}{x_n} + \frac{2x_{n+1} + 1}{x_
  \end{align}
  substitute this into the second term: 
  \begin{align}
-     \frac{2x_{n+1} + 1}{x_{n+1}} = \frac{2(x_n + h) + 1}{x_n + h}.
+     2x_{n+1} + \frac{1}{x_{n+1}} = 2(x_n + h) + \frac{1}{x_n + h}.
  \end{align}
  Now rewrite the formula:
  \begin{align}
-     y_{n+1} = y_n + \frac{h}{2} \left[ \frac{2x_n + 1}{x_n} + \frac{2(x_n + h) + 1}{x_n + h} \right].
+     y_{n+1} = y_n + \frac{h}{2} \left[2x_n +  \frac{1}{x_n} + 2(x_n + h) + \frac{1}{x_n + h} \right].
+     y_{n+1} = y_n + \frac{h}{2} \brak{4x_n + 2h + \frac{1}{x_n}+\frac{1}{x_n + h}}
  \end{align}
+ \textbf{theoretical solution:}
+ \begin{align}
+    \frac{dy}{dx} = 2x + \frac{1}{x}\\
+    dy = \brak{2x+\frac{1}{x}}dx\\
+    \int dy = \int\brak{2x+\frac{1}{x}}dx\\
+    y = x^2 + \log{\abs{x}} + C
+\end{align}
+given it passes through \myvec{1,1} C = 0
+Therefore: 
+\begin{align}
+    y = x^2 + \log{\abs{x}}
+\end{align}
+ \begin{figure}[h!]
+   \centering
+   \includegraphics[width=\columnwidth]{figs/fig.pdf}
+\end{figure}
 \end{document}
