@@ -55,6 +55,57 @@
 \textbf{Question:}\\
 $xdy = \brak{2x^2+1}dx$\\
 \textbf{Solution:}\\
+\textbf{Using Bilinear Transform technique:}\\
+Original Differential Equation:
+\begin{align}
+    \frac{dy}{dx} = 2x + \frac{1}{x}
+\end{align}
+Let $\frac{dy}{dx} = x(t)$ where $x(t) = 2t + \frac{1}{t}$
+Taking the Laplace transform:
+\begin{align}
+sY(s) = X(s)    
+\end{align}
+which gives the transfer function:
+\begin{align}
+H(s) = \frac{Y(s)}{X(s)} = \frac{1}{s}.    
+\end{align}
+Using the Bilinear Transform Relation\\
+The bilinear transform substitutes  with a discrete-time equivalent:
+\begin{align}
+    s = \frac{2}{T}\left(\frac{1 - z^{-1}}{1 + z^{-1}}\right)
+\end{align}
+where $T$ is the sampling period. Substituting this into the equation gives :
+\begin{align}
+   H(z) = \frac{1}{\frac{2}{T}\left(\frac{1 - z^{-1}}{1 + z^{-1}}\right)}
+\end{align}
+Simplify the expression:
+\begin{align}
+H(z) = \frac{T}{2} \times \frac{1 + z^{-1}}{1 - z^{-1}}
+\end{align}
+$H(z)$ describes the transfer function in the z-domain. Rewrite it in terms of input-output relation:
+\begin{align}
+    H(z) = \frac{Y(z)}{X(z)}\\
+\frac{Y(z)}{X(z)} = \frac{T}{2} \times \frac{1 + z^{-1}}{1 - z^{-1}}\\
+\text{Cross multiply:}\\
+Y(z)\left(1 - z^{-1}\right) = \frac{T}{2} X(z)\left(1 + z^{-1}\right)
+\end{align}
+Expanding into time domain (replace  with a delay operator):
+\begin{align}
+    y[n] - y[n-1] = \frac{T}{2}\left(x[n] + x[n-1]\right)
+\end{align}
+$x(n) = 2t(n) +\frac{1}{t(n)}$, \text{where} $t(n) = t(0) + n*h$
+Substituting in the equation gives 
+\begin{align}
+y[n] - y[n-1] = \frac{h}{2}\brak{2t(n) +\frac{1}{t(n)} + 2t(n-1) + \frac{1}{t(n-1)}}\\
+y[n] - y[n-1] = \frac{h}{2}\brak{2(t(0)+n\cdot h)+\frac{1}{t(0)+n\cdot h}+2(t(0)+(n-1) \cdot h)+ \frac{1}{t(0)+(n-1) \cdot h}}\\
+\text{simplifying,}\\
+y_{n} - y_{n-1} = \frac{h}{2}\brak{4t_0 + 4n\cdot h -2h + \frac{1}{t_0 + n\cdot h} + \frac{1}{t_0 + (n-1)\cdot h}}
+\end{align}
+here $t_0 = 1$ substituting we get 
+\begin{align}
+y_{n} - y_{n-1} = \frac{h}{2}\brak{4 + 4n\cdot h -2h + \frac{1}{1 + n\cdot h} + \frac{1}{1 + (n-1)\cdot h}}
+\end{align}
+\textbf{trapezoidal solution:}
 The aim is to find the difference equation using the trapezoidal law using the following  initial conditions $x_0 = 1$ and $y_0 = 1$
 \begin{align}
   \frac{dy}{dx} = 2x + \frac{1}{x}
