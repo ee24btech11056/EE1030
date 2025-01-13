@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.9.4)  13 JAN 2025 22:31
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.9.4)  13 JAN 2025 22:34
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1731,13 +1731,13 @@ LaTeX Font Info:    Trying to load font information for OT1+txr on input line 4
 
 (/usr/share/texlive/texmf-dist/tex/latex/txfonts/ot1txr.fd
 File: ot1txr.fd 2000/12/15 v3.1
-)
-No file main.aux.
+) (./main.aux)
 \openout1 = `main.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/txmi/m/it on input line 43.
 LaTeX Font Info:    Trying to load font information for OML+txmi on input line 
 43.
+
 (/usr/share/texlive/texmf-dist/tex/latex/txfonts/omltxmi.fd
 File: omltxmi.fd 2000/12/15 v3.1
 )
@@ -1928,6 +1928,8 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 LaTeX Info: Redefining \ref on input line 43.
 LaTeX Info: Redefining \pageref on input line 43.
 LaTeX Info: Redefining \nameref on input line 43.
+
+(./main.out) (./main.out)
 \@outlinefile=\write5
 \openout5 = `main.out'.
 
@@ -1982,21 +1984,22 @@ Underfull \hbox (badness 10000) in paragraph at lines 91--99
 
 [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
 
-] [2] (./main.aux)
-
-Package rerunfilecheck Warning: File `main.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `main.out':
-(rerunfilecheck)             Before: <no file>
-(rerunfilecheck)             After:  D41D8CD98F00B204E9800998ECF8427E;0.
+]
+<figs/fig.pdf, id=54, 578.16pt x 433.62pt>
+File: figs/fig.pdf Graphic file (type pdf)
+<use figs/fig.pdf>
+Package pdftex.def Info: figs/fig.pdf  used on input line 107.
+(pdftex.def)             Requested size: 364.1953pt x 273.14235pt.
+ [2 <./figs/fig.pdf>]
+(./main.aux)
+Package rerunfilecheck Info: File `main.out' has not changed.
+(rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 58685 strings out of 480171
- 1471897 string characters out of 5894490
+ 58703 strings out of 480171
+ 1472160 string characters out of 5894490
  2092961 words of memory out of 5000000
- 75715 multiletter control sequences out of 15000+600000
+ 75724 multiletter control sequences out of 15000+600000
  535789 words of font info for 163 fonts, out of 8000000 for 9000
  62 hyphenation exceptions out of 8191
  106i,10n,107p,725b,843s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -2007,10 +2010,10 @@ t/fonts/type1/public/txfonts/rtxr.pfb></usr/share/texlive/texmf-dist/fonts/type
 onts/txsy.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb><
 /usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texl
 ive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on main.pdf (2 pages, 49301 bytes).
+Output written on main.pdf (2 pages, 59956 bytes).
 PDF statistics:
- 96 PDF objects out of 1000 (max. 8388607)
- 61 compressed objects within 1 object stream
- 16 named destinations out of 1000 (max. 500000)
- 109 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 133 PDF objects out of 1000 (max. 8388607)
+ 67 compressed objects within 1 object stream
+ 17 named destinations out of 1000 (max. 500000)
+ 114 words of extra memory for PDF output out of 10000 (max. 10000000)
 
