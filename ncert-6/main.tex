@@ -81,8 +81,8 @@ The companion matrix is given as,
 We can find the eigenvalues using QR algorithm.
 
 \begin{align}
-    A_n = Q_n\,R_n\\
-    A_{n+1} = R_n\,Q_n
+   A_n = Q_n\,R_n\\
+   A_{n+1} = R_n\,Q_n
 \end{align}
 The goal is to find the eigenvalues of this matrix using the QR algorithm.
 
@@ -198,7 +198,10 @@ A_1 = RQ = \begin{bmatrix}
 
 \section*{Step 2: Repeat the QR Iteration}
 The QR steps will be repeated iteratively until the matrix converges to a quasi-upper triangular form.
-
+\begin{align}
+   A_n = Q_n\,R_n\\
+   A_{n+1} = R_n\,Q_n
+\end{align}
 \section*{Step 3: Final Quasi-Upper Triangular Form}
 Since the eigenvalues are complex, the matrix will converge to a block diagonal form:
 
